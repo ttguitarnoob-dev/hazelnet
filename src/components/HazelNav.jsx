@@ -4,7 +4,7 @@ export default function HazelNav() {
 
             <h1>HazelNet</h1>
             <div className="home-button">
-                <a href="/hazel"><button className="go-home">Go Home</button></a>
+                <a href="/"><button className="go-home">Go Home</button></a>
             </div>
         </div>
     </nav>
