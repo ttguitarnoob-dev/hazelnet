@@ -7,12 +7,7 @@ import HazelNav from './components/HazelNav';
 import Wiki from './components/Wiki';
 import Poke from './components/Poke';
 import Yt from './components/Yt';
-import TravNav from './components/TravNav';
-import Trav from './components/Trav';
-import Budget from './components/Budget';
 import NoGame from './components/NoGame';
-import Kiara from './components/Kiara';
-import TaskRandom from './components/TaskRandom';
 import Academy from './components/Academy/Academy';
 import SchoolJournal from './components/Academy/SchoolJournal';
 import NewJournal from './components/Academy/NewJournal';
@@ -39,6 +34,8 @@ function App() {
         <Route path='/' element={<Hazel />} />
         <Route path='/wiki' element={<Wiki />} />
         <Route path='/poke' element={<Poke />} />
+        <Route path='/videos' element={<Yt />} />
+        <Route path='/no-game' element={<NoGame />} />
         <Route path='/academy/journal/' element={<SchoolJournal />} />
       </Routes>
     </div>

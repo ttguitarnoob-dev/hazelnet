@@ -17,7 +17,7 @@ export default function Hazel() {
             <ul>
                 <li><a href="/wiki"><button>Research Things!</button></a></li>
                 <li><a href="/poke"><button>Pokedex!</button></a></li>
-                <li><a href="/youtube"><button>Videos!</button></a></li>
+                <li><a href="/videos"><button>Videos!</button></a></li>
                 <li><a href={prodigy}><button>Prodigy!</button></a></li>
                 <li><a href="/academy"><button>School!</button></a></li>
             </ul>
