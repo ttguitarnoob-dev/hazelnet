@@ -19,7 +19,7 @@ export default function SchoolJournal() {
             const options = {
                 method: "GET"
             }
-            
+
             const response = await fetch(URL, options)
             const results = await response.json()
             var array = results.map(journal => journal)
@@ -42,24 +42,37 @@ export default function SchoolJournal() {
 
 
     return <div>
-        <h2>Learning Journal</h2>
-        <div>
-            <a href="/academy/journal/new">New Journal</a>
+        <div className="page-content">
+            <h2>Learning Journal</h2>
+            <a href="/academy">Back to Main Academy Page</a>
+            
+            <div >
+                <ul>
+                    <li><a href="/academy/journal/new"><button>New Journal</button></a></li>
+                </ul>
+            </div>
+            <h3>Look back at your old journals!</h3>
+            <div className="journal-list">
+                <ul>
+                    {/* {journalList && journalList.map((journal, index) => (
+                        // <a href={`/academy/journal/${journal._id}`} key={journal._id}><li>{journal.date}</li></a>
+                        <li key={journal._id}>
+                            <Link to={`/academy/journal/${journal._id}`}>{journal.date}</Link>
+                        </li>
+                    ))} */}
+
+                    <li className="journal-entry">Mon Jul 10, 2023</li>
+                    <li className="journal-entry">Mon Jul 10, 2023</li>
+                    <li className="journal-entry">Mon Jul 10, 2023</li>
+                    <li className="journal-entry">Mon Jul 10, 2023</li>
+                    <li className="journal-entry">Mon Jul 10, 2023</li>
+                    <li className="journal-entry">Mon Jul 10, 2023</li>
+                    <li className="journal-entry">Mon Jul 10, 2023</li>
+                  
+                </ul>
+            </div>
+
         </div>
-
-        <h3>Look back at your old journals!</h3>
-        <div className="journal-list">
-            <ul>
-                {journalList && journalList.map((journal, index) => (
-                    // <a href={`/academy/journal/${journal._id}`} key={journal._id}><li>{journal.date}</li></a>
-                    <li key={journal._id}>
-                    <Link to={`/academy/journal/${journal._id}`}>{journal.date}</Link>
-                    </li>
-                ))}
-            </ul>
-        </div>
-
-
 
     </div>
 }

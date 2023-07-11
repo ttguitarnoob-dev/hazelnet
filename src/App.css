@@ -94,7 +94,7 @@ li {
 
 .main-buttons button {
   margin: 50px;
-  height: 80px;
+  height: 5rem;
   border-radius: 30px;
   border: solid 5px rgb(0, 17, 255);
 }
@@ -131,4 +131,17 @@ iframe {
 
 .button-list {
   padding: 2rem;
+}
+
+.journal-list {
+  display: grid;
+  padding: 2rem;
+}
+
+.journal-entry {
+  padding: 2rem;
+  margin: 2rem;
+  background-color: #ff00b3;
+  border: 2px solid black;
+  border-radius: 20px;
 }
