@@ -159,4 +159,24 @@ iframe {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 60vw;
+  
+}
+
+.input-form {
+  width: 60vw;
+}
+
+ul {
+  width: 100%;
+}
+
+.form-item {
+  padding: 2rem;
+}
+
+input[type=text] {
+  padding: 10px;
+
+  width: 100%;
 }

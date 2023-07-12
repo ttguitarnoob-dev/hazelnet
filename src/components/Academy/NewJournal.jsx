@@ -53,7 +53,7 @@ export default function NewJournal() {
         <div>
             <h2>New Learning Journal</h2>
             <div className="journal-form">
-                <form>
+                <form className="input-form">
                     <ul>
                         <div className="form-item">
                             <li>
