@@ -89,7 +89,8 @@ button:hover {
 }
 
 li {
-  display: inline;
+  display: inline-block;
+
 }
 
 .main-buttons button {
@@ -134,8 +135,14 @@ iframe {
 }
 
 .journal-list {
-  display: grid;
-  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 7rem;
+  background-color: aquamarine;
+  max-width: 80vw;
+  border: 2px solid black;
+  border-radius: 20px;
 }
 
 .journal-entry {

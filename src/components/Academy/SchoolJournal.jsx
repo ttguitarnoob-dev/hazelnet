@@ -45,14 +45,16 @@ export default function SchoolJournal() {
         <div className="page-content">
             <h2>Learning Journal</h2>
             <a href="/academy">Back to Main Academy Page</a>
-            
+
             <div >
-                <ul>
+            <a href="/academy/journal/new"><button>New Journal</button></a>
+                {/* <ul>
                     <li><a href="/academy/journal/new"><button>New Journal</button></a></li>
-                </ul>
+                </ul> */}
             </div>
             <h3>Look back at your old journals!</h3>
             <div className="journal-list">
+
                 <ul>
                     {/* {journalList && journalList.map((journal, index) => (
                         // <a href={`/academy/journal/${journal._id}`} key={journal._id}><li>{journal.date}</li></a>
@@ -68,7 +70,32 @@ export default function SchoolJournal() {
                     <li className="journal-entry">Mon Jul 10, 2023</li>
                     <li className="journal-entry">Mon Jul 10, 2023</li>
                     <li className="journal-entry">Mon Jul 10, 2023</li>
-                  
+                    <li className="journal-entry">Mon Jul 10, 2023</li>
+                    <li className="journal-entry">Mon Jul 10, 2023</li>
+                    <li className="journal-entry">Mon Jul 10, 2023</li>
+                    <li className="journal-entry">Mon Jul 10, 2023</li>
+                    <li className="journal-entry">Mon Jul 10, 2023</li>
+                    <li className="journal-entry">Mon Jul 10, 2023</li>
+                    <li className="journal-entry">Mon Jul 10, 2023</li>
+                    <li className="journal-entry">Mon Jul 10, 2023</li>
+                    <li className="journal-entry">Mon Jul 10, 2023</li>
+                    <li className="journal-entry">Mon Jul 10, 2023</li>
+                    <li className="journal-entry">Mon Jul 10, 2023</li>
+                    <li className="journal-entry">Mon Jul 10, 2023</li>
+                    <li className="journal-entry">Mon Jul 10, 2023</li>
+                    <li className="journal-entry">Mon Jul 10, 2023</li>
+                    <li className="journal-entry">Mon Jul 10, 2023</li>
+                    <li className="journal-entry">Mon Jul 10, 2023</li>
+                    <li className="journal-entry">Mon Jul 10, 2023</li>
+                    <li className="journal-entry">Mon Jul 10, 2023</li>
+                    <li className="journal-entry">Mon Jul 10, 2023</li>
+                    <li className="journal-entry">Mon Jul 10, 2023</li>
+                    <li className="journal-entry">Mon Jul 10, 2023</li>
+                    <li className="journal-entry">Mon Jul 10, 2023</li>
+                    
+                    
+
+
                 </ul>
             </div>
 
