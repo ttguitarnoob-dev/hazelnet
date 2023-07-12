@@ -11,7 +11,7 @@ export default function NewJournal() {
         console.log('omgchanged', initialInput)
     }
 
-  
+
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -19,7 +19,7 @@ export default function NewJournal() {
         const formBody = Object.keys(initialInput).map(key =>
             encodeURIComponent(key) + '=' +
             encodeURIComponent(initialInput[key])).join('&')
-        
+
         createItem(formBody)
 
     }
@@ -52,63 +52,73 @@ export default function NewJournal() {
     return <div>
         <div>
             <h2>New Learning Journal</h2>
-            <form>
-                <ul>
-                    <li>
-                        <label htmlFor="hilow">What was your high and low today?</label>
-                        <input
-                            name="hilow"
-                            id="hilow"
-                            type="text"
-                            placeholder="Enter response here"
-                            onChange={handleChange}
-                        />
-                    </li>
-                    <li>
-                        <label htmlFor="learn">What Did You Learn at School Today?</label>
-                        <textarea
-                            name="learn"
-                            id="learn"
-                            type="textarea"
-                            placeholder="Enter response here"
-                            onChange={handleChange}
-                        />
-                    </li>
-                    <li>
-                        <label htmlFor="fail">Name one thing that you failed at today.</label>
-                        <input
-                            name="fail"
-                            id="fail"
-                            type="text"
-                            placeholder="Enter response here"
-                            onChange={handleChange}
-                        />
-                    </li>
-                    <li>
-                        <label htmlFor="failTeach">What did failing teach you?.</label>
-                        <input
-                            name="failTeach"
-                            id="failTeach"
-                            type="text"
-                            placeholder="Enter response here"
-                            onChange={handleChange}
-                        />
-                    </li>
-                    <li>
-                        <label htmlFor="failImprove">How can you improve next time?</label>
-                        <input
-                            name="failImprove"
-                            id="failImprove"
-                            type="text"
-                            placeholder="Enter response here"
-                            onChange={handleChange}
-                        />
-                    </li>
-                    <li>
-                        <button onClick={handleSubmit}>Submit</button>
-                    </li>
-                </ul>
-            </form>
+            <div className="journal-form">
+                <form>
+                    <ul>
+                        <div className="form-item">
+                            <li>
+                                <input
+                                    name="hilow"
+                                    id="hilow"
+                                    type="text"
+                                    placeholder="What was your high and low today?"
+                                    onChange={handleChange}
+                                />
+                            </li>
+                        </div>
+                        <div className="form-item">
+
+                            <li>
+                                <textarea
+                                    name="learn"
+                                    id="learn"
+                                    type="textarea"
+                                    placeholder="What Did You Learn at School Today?"
+                                    onChange={handleChange}
+                                />
+                            </li>
+                        </div>
+                        <div className="form-item">
+                            <li>
+                                <input
+                                    name="fail"
+                                    id="fail"
+                                    type="text"
+                                    placeholder="Name one thing that you failed at today."
+                                    onChange={handleChange}
+                                />
+                            </li>
+                        </div>
+                        <div className="form-item">
+                            <li>
+                                <input
+                                    name="failTeach"
+                                    id="failTeach"
+                                    type="text"
+                                    placeholder="What did failing teach you?."
+                                    onChange={handleChange}
+                                />
+                            </li>
+                        </div>
+                        <div className="form-item">
+                            <li>
+                                <input
+                                    name="failImprove"
+                                    id="failImprove"
+                                    type="text"
+                                    placeholder="How can you improve next time?"
+                                    onChange={handleChange}
+                                />
+                            </li>
+                        </div>
+                        <div className="form-item">
+                            <li>
+                                <button onClick={handleSubmit}>Submit</button>
+                            </li>
+                        </div>
+                    </ul>
+                </form>
+            </div>
             <div>
                 <a href="/academy/journal">Back to Learning Journal</a>
             </div>

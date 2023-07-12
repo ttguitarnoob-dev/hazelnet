@@ -152,3 +152,11 @@ iframe {
   border: 2px solid black;
   border-radius: 20px;
 }
+
+.journal-form {
+  background-color: aquamarine;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
