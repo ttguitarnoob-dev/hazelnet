@@ -50,7 +50,7 @@ export default function NewJournal() {
     console.log('smelljournalnewthing')
 
     return <div>
-        <div>
+        <div className="journal-page">
             <h2>New Learning Journal</h2>
             <div className="journal-form">
                 <form className="input-form">
@@ -83,6 +83,7 @@ export default function NewJournal() {
                                 <input
                                     name="fail"
                                     id="fail"
+                                    className="text-area"
                                     type="text"
                                     placeholder="Name one thing that you failed at today."
                                     onChange={handleChange}

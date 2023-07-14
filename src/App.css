@@ -160,6 +160,8 @@ iframe {
   align-items: center;
   flex-direction: column;
   width: 60vw;
+  border: 1px solid black;
+  border-radius: 20px;
   
 }
 
@@ -173,6 +175,7 @@ ul {
 
 .form-item {
   padding: 2rem;
+  width: 30rem;
 }
 
 input[type=text] {
@@ -182,3 +185,17 @@ input[type=text] {
   width: 30rem;
 }
 
+textarea {
+  width: 30rem;
+  border: 1px solid black;
+  border-radius: 40px;
+  height: 10rem;
+  padding: 2rem;
+}
+
+.journal-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
