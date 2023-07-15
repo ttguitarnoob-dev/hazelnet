@@ -58,7 +58,7 @@ export default function SchoolJournal() {
                 <ul>
                     {journalList && journalList.map((journal, index) => (
                         // <a href={`/academy/journal/${journal._id}`} key={journal._id}><li>{journal.date}</li></a>
-                        <li key={journal._id}>
+                        <li className="journal-entry" key={journal._id}>
                             <Link to={`/academy/journal/${journal._id}`}>{journal.date}</Link>
                         </li>
                     ))}
