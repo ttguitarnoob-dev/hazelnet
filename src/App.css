@@ -141,7 +141,7 @@ iframe {
   padding: 7rem;
   background-color: aquamarine;
   max-width: 80vw;
-  border: 2px solid black;
+  border: 1px solid black;
   border-radius: 20px;
 }
 
@@ -162,7 +162,9 @@ iframe {
   width: 60vw;
   border: 1px solid black;
   border-radius: 20px;
-  
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .input-form {

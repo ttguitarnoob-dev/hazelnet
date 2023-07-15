@@ -5,7 +5,6 @@ export default function NewJournal() {
 
 
     const handleChange = (e) => {
-        //take e.target.name and use it as the key for which initialInput to change
         var edited = e.target.name
         initialInput[edited] = e.target.value
         console.log('omgchanged', initialInput)
@@ -52,6 +51,9 @@ export default function NewJournal() {
     return <div>
         <div className="journal-page">
             <h2>New Learning Journal</h2>
+            <div>
+                <a href="/academy/journal"><button>Back to Learning Journal</button></a>
+            </div>
             <div className="journal-form">
                 <form className="input-form">
                     <ul>
@@ -120,9 +122,7 @@ export default function NewJournal() {
                     </ul>
                 </form>
             </div>
-            <div>
-                <a href="/academy/journal">Back to Learning Journal</a>
-            </div>
+            
         </div>
     </div>
 

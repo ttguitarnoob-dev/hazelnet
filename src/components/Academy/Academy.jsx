@@ -7,10 +7,10 @@ export default function Academy() {
             <div className="main-buttons">
                 <ul>
                     <li><a href="/academy/journal"><button>School Journal</button></a></li>
-                    <li><a href="/poke"><button>Pokedex!</button></a></li>
-                    <li><a href="/videos"><button>Videos!</button></a></li>
-                    <li><a href="#"><button>Prodigy!</button></a></li>
-                    <li><a href="/academy"><button>School!</button></a></li>
+                    <li><a href="/poke"><button>Other School !</button></a></li>
+                    <li><a href="/videos"><button>School thing!</button></a></li>
+                    <li><a href="#"><button>Other Shool thing!</button></a></li>
+                
                 </ul>
             </div>
         </div>

@@ -63,6 +63,8 @@ export default function SchoolJournal() {
                         </li>
                     ))}
 
+                    
+
 
                 </ul>
             </div>
