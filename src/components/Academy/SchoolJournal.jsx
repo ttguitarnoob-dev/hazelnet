@@ -38,12 +38,7 @@ export default function SchoolJournal() {
         handleFetch()
     }, [])
 
-    function parseDate(index) {
-        console.log('[arse', journalList[index].created_at)
-        return journalList[index].date
-    }
- 
-    // parseDate(1)
+    
 
     return <div>
         <div className="page-content">
@@ -64,7 +59,7 @@ export default function SchoolJournal() {
                         // <a href={`/academy/journal/${journal._id}`} key={journal._id}><li>{journal.date}</li></a>
                         <li className="journal-entry" key={journal._id}>
                             
-                            <a href={`/academy/journal/${journal.id}`} ><button>{parseDate(index)}</button></a>
+                            <a href={`/academy/journal/${journal.id}`} ><button>{journal.date}</button></a>
                         </li>
                     ))}
 
