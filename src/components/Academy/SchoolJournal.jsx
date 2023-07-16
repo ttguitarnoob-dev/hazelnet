@@ -5,12 +5,6 @@ import { Link } from "react-router-dom"
 export default function SchoolJournal() {
 
     var [journalList, setJournalList] = useState([])
-
-    const smell = new Date().toDateString()
-
-
-    console.log("smellass", smell)
-
     const journalURL = "https://api.ttguitarnoob.cloud/journals"
 
     async function handleFetch() {
@@ -38,7 +32,7 @@ export default function SchoolJournal() {
         handleFetch()
     }, [])
 
-    
+
 
     return <div>
         <div className="page-content">
@@ -46,10 +40,7 @@ export default function SchoolJournal() {
             <a href="/academy">Back to Main Academy Page</a>
 
             <div >
-            <a href="/academy/journal/new"><button>New Journal</button></a>
-                {/* <ul>
-                    <li><a href="/academy/journal/new"><button>New Journal</button></a></li>
-                </ul> */}
+                <a href="/academy/journal/new"><button>New Journal</button></a>
             </div>
             <h3>Look back at your old journals!</h3>
             <div className="journal-list">
@@ -58,12 +49,12 @@ export default function SchoolJournal() {
                     {journalList && journalList.map((journal, index) => (
                         // <a href={`/academy/journal/${journal._id}`} key={journal._id}><li>{journal.date}</li></a>
                         <li className="journal-entry" key={journal._id}>
-                            
+
                             <a href={`/academy/journal/${journal.id}`} ><button>{journal.date}</button></a>
                         </li>
                     ))}
 
-                    
+
 
 
                 </ul>
