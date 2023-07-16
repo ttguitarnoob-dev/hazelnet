@@ -35,6 +35,7 @@ export default function JournalDetails() {
 
     return <div className="page-container">
         <h1>Journal for {journal.date}</h1>
+        <a href="/academy/journal"><button>Back to Journal List</button></a>
         <div className="container">
             <div className="details-list">
                 <ul>
@@ -63,6 +64,6 @@ export default function JournalDetails() {
                 </ul>
             </div>
         </div>
-        <a href="/academy/journal">Back to Journal List</a>
+        
     </div>
 }

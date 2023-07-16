@@ -37,10 +37,11 @@ export default function SchoolJournal() {
     return <div>
         <div className="page-content">
             <h2>Learning Journal</h2>
-            <a href="/academy">Back to Main Academy Page</a>
 
-            <div >
+
+            <div>
                 <a href="/academy/journal/new"><button>New Journal</button></a>
+                <a href="/academy"><button>Go Back</button></a>
             </div>
             <h3>Look back at your old journals!</h3>
             <div className="journal-list">

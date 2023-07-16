@@ -69,7 +69,7 @@ button:hover {
   /* background-color: #ff00b3; */
   cursor: pointer;
   transform: scale(1.1);
-  border: solid 4px pink;
+  border: solid 2px pink;
 }
 
 .go-home {
@@ -208,6 +208,7 @@ textarea {
   border: 1px solid black;
   border-radius: 20px;
   padding: 3rem;
+  margin-top: 2rem;
 }
 
 .container li {
@@ -221,6 +222,7 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
 }
 
 .page-container {
