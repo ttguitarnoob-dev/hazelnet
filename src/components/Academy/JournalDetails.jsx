@@ -31,34 +31,38 @@ export default function JournalDetails() {
     }, [])
 
 
-   
 
-    return <div>
+
+    return <div className="page-container">
         <h1>Journal for {journal.date}</h1>
-        <ul>
-           
-                <li>
-                    <h2>What was your high and low for the day?</h2>
-                    <p>{journal.hilow}</p>
-                </li>
-                <li>
-                    <h2>What did you learn today?</h2>
-                    <p>{journal.learn}</p>
-                </li>
-                <li>
-                    <h2>In what way did you fail today?</h2>
-                    <p>{journal.fail}</p>
-                </li>
-                <li>
-                    <h2>What did failing teach you?</h2>
-                    <p>{journal.failTeach}</p>
-                </li>
-                <li>
-                    <h2>How will you improve next time?</h2>
-                    <p>{journal.failImprove}</p>
-                </li>
-         
-        </ul>
+        <div className="container">
+            <div className="details-list">
+                <ul>
+
+                    <li>
+                        <h2>What was your high and low for the day?</h2>
+                        <p>{journal.hilow}</p>
+                    </li>
+                    <li>
+                        <h2>What did you learn today?</h2>
+                        <p>{journal.learn}</p>
+                    </li>
+                    <li>
+                        <h2>In what way did you fail today?</h2>
+                        <p>{journal.fail}</p>
+                    </li>
+                    <li>
+                        <h2>What did failing teach you?</h2>
+                        <p>{journal.failTeach}</p>
+                    </li>
+                    <li>
+                        <h2>How will you improve next time?</h2>
+                        <p>{journal.failImprove}</p>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
         <a href="/academy/journal">Back to Journal List</a>
     </div>
 }
