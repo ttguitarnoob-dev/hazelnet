@@ -39,7 +39,7 @@ export default function SchoolJournal() {
             <h2>Learning Journal</h2>
 
 
-            <div>
+            <div className="button-menu">
                 <a href="/academy/journal/new"><button>New Journal</button></a>
                 <a href="/academy"><button>Go Back</button></a>
             </div>

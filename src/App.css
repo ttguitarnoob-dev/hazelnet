@@ -231,3 +231,7 @@ textarea {
   justify-content: center;
   align-items: center;
 }
+
+.button-menu a {
+  margin: 2rem;
+}
