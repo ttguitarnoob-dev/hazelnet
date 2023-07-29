@@ -2,21 +2,23 @@
 
 
 body {
-  /* background-image: url("../public/pokeimage.jpg"); */
+  background-image: url("../public/pokeimage.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
   margin: 0 auto;
   font-family: 'Lakki Reddy', cursive;
   background-attachment: fixed;
 }
 
-.hazel-page {
+/* .hazel-page {
   background-image: url("../public/pokeimage.jpg");
   background-repeat: none;
   background-size: cover;
   height: 100vh;
   margin-top: -6.5rem;
   z-index: -1;
-}
+  background-attachment: fixed;
+} */
 
 
 .App {
@@ -235,4 +237,26 @@ textarea {
 
 .button-menu a {
   margin: 2rem;
+}
+
+.daily-verse {
+  background-color: aquamarine;
+  border: 1px solid black;
+  border-radius: 30px;
+  width: 50vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
+}
+
+.daily-verse li, h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.daily-verse h2 {
+  border-bottom: solid 3px black;
 }
