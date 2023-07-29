@@ -16,14 +16,42 @@ import JournalDetails from './components/Academy/JournalDetails';
 
 function App() {
 
+  //App State
+  let [dailyVerse, setDailyVerse] = useState()
 
+  //Fetch API
 
+  async function fetchVerse() {
 
-
+    try {
+      const url = "https://labs.bible.org/api/?passage=random&type=json"
+      const options = {
+        method: "GET"
+      }
+      const response = await fetch(url, options)
+      const data = await response.json()
+      // const data = await response.text()
+      console.log('versess', data)
+      setDailyVerse(data)
+    } catch(err){
+      console.log('something broke when fetching a verse', err)
+    }
 
   
+
+
+}
+
+
+  //fetch verse function call
+  useEffect(() => {
+    fetchVerse()
+  }, [])
+
+
+
   return (
-    
+
     <div>
       <HazelNav />
       <Routes>
@@ -31,7 +59,7 @@ function App() {
         <Route path='/academy/journal/' element={<SchoolJournal />} />
         <Route path='/academy/journal/new' element={<NewJournal />} />
         <Route path='/academy' element={<Academy />} />
-        <Route path='/' element={<Hazel />} />
+        <Route path='/' element={<Hazel dailyVerse = {dailyVerse} />} />
         <Route path='/wiki' element={<Wiki />} />
         <Route path='/poke' element={<Poke />} />
         <Route path='/videos' element={<Yt />} />

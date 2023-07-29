@@ -101,6 +101,7 @@ li {
 }
 
 iframe {
+  background-color: white;
   border-radius: 40px;
   border: solid 7px rgb(255, 0, 200);
   display: flex;
