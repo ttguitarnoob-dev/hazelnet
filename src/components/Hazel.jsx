@@ -63,7 +63,7 @@ export default function Hazel() {
                 <h3>{dailyVerse.dailyVerse[0].bookname} {dailyVerse.dailyVerse[0].chapter}:{dailyVerse.dailyVerse[0].verse}</h3>
                 <p>{dailyVerse.dailyVerse[0].text}</p>
             </a> */}
-            <h2>Bible Verses of the Day!</h2>
+            <h2>Bible Verse of the Day!</h2>
             <ul>
                 {dailyVerse && dailyVerse.map((verse, index) => (
                     <li key={index}>
