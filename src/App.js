@@ -12,6 +12,7 @@ import Academy from './components/Academy/Academy';
 import SchoolJournal from './components/Academy/SchoolJournal';
 import NewJournal from './components/Academy/NewJournal';
 import JournalDetails from './components/Academy/JournalDetails';
+import SillyGame from './components/SillyGame';
 // import Prodigy from './components/Prodigy';
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
         <Route path='/videos' element={<Yt />} />
         <Route path='/no-game' element={<NoGame />} />
         <Route path='/academy/journal/' element={<SchoolJournal />} />
+        <Route path='/silly-game' element={<SillyGame />} />
       </Routes>
     </div>
 
