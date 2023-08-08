@@ -10,13 +10,13 @@ export default function Hazel() {
     //State
     let [dailyVerse, setDailyVerse] = useState()
 
-    var prodigy = ""
+    // var prodigy = ""
 
-    if (currentHour < 10) {
-        prodigy = "/no-game"
-    } else {
-        prodigy = "https://sso.prodigygame.com/game/login?rid=daa00d0b-85de-4ec2-ae43-031f7232101d"
-    }
+    // if (currentHour < 10) {
+    //     prodigy = "/no-game"
+    // } else {
+    //     prodigy = "https://sso.prodigygame.com/game/login?rid=daa00d0b-85de-4ec2-ae43-031f7232101d"
+    // }
 
     //Verse Fetch
     async function fetchVerse() {
@@ -50,9 +50,9 @@ export default function Hazel() {
                 <li><a href="/wiki"><button>Wikipedia!</button></a></li>
                 <li><a href="/poke"><button>Pokedex!</button></a></li>
                 <li><a href="/videos"><button>Videos!</button></a></li>
-                <li><a href={prodigy}><button>Prodigy!</button></a></li>
+                {/* <li><a href={prodigy}><button>Prodigy!</button></a></li> */}
                 <li><a href="/academy"><button>School!</button></a></li>
-                <li><a href="/silly-game"><button>Silly Game!</button></a></li>
+                {/* <li><a href="/silly-game"><button>Silly Game!</button></a></li> */}
             </ul>
         </div>
 
