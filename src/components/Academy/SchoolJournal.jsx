@@ -35,17 +35,20 @@ export default function SchoolJournal() {
 
 
     return <div>
+
         <div className="page-content">
-            <h2>Learning Journal</h2>
+            <div className="container">
+                <h2>Learning Journal</h2>
 
 
-            <div className="button-menu">
-                <a href="/academy/journal/new"><button>New Journal</button></a>
-                <a href="/academy"><button>Go Back</button></a>
+                <div className="button-menu">
+                    <a href="/academy/journal/new"><button>New Journal</button></a>
+                    <a href="/academy"><button>Go Back</button></a>
+                </div>
+
             </div>
-            <h3>Look back at your old journals!</h3>
             <div className="journal-list">
-
+                <h3>Look back at your old journals!</h3>
                 <ul>
                     {journalList && journalList.map((journal, index) => (
                         // <a href={`/academy/journal/${journal._id}`} key={journal._id}><li>{journal.date}</li></a>
