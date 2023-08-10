@@ -115,6 +115,18 @@ export default function NewJournal() {
                             </li>
                         </div>
                         <div className="form-item">
+
+                            <li>
+                                <textarea
+                                    name="bible"
+                                    id="bible"
+                                    type="textarea"
+                                    placeholder="What is your Bible verse of the day and what does it mean to you?"
+                                    onChange={handleChange}
+                                />
+                            </li>
+                        </div>
+                        <div className="form-item">
                             <li>
                                 <button onClick={handleSubmit}>Submit</button>
                             </li>

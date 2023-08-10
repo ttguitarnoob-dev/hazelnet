@@ -60,6 +60,10 @@ export default function JournalDetails() {
                         <h2>How will you improve next time?</h2>
                         <p>{journal.failImprove}</p>
                     </li>
+                    <li>
+                        <h2>What was your Bible verse of the day and what did it mean to you?</h2>
+                        <p>{journal.bible}</p>
+                    </li>
 
                 </ul>
             </div>
