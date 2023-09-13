@@ -1,7 +1,10 @@
+import { useNavigate } from "react-router-dom"
+
 export default function NewJournal() {
 
     var initialInput = {}
     const journalURL = "https://api.ttguitarnoob.cloud/journals"
+    const navigate = useNavigate()
 
 
     const handleChange = (e) => {
@@ -24,7 +27,6 @@ export default function NewJournal() {
     }
 
     const createItem = async (data) => {
-        console.log('creating journal entry', data)
         const URL = journalURL
         const options = {
             method: "POST",
@@ -36,14 +38,14 @@ export default function NewJournal() {
         }
         try {
             const createdJournal = await fetch(URL, options)
-            console.log("it's working so far", createdJournal)
             const parsedJournal = await createdJournal.json()
-            console.log("what is the data I'm trying to send", parsedJournal)
+            navigate("/academy/journal")
+            return parsedJournal
+
 
         } catch (err) {
             console.log('error creating journal', err)
         }
-        console.log('Journal created', data)
     }
 
     console.log('smelljournalnewthing')
