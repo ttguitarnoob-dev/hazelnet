@@ -61,7 +61,7 @@ export default function JournalDetails() {
                         <p>{journal.failImprove}</p>
                     </li>
                     <li>
-                        <h2>What was your Bible verse of the day and what did it mean to you?</h2>
+                        <h2>How did God show up in your life today?</h2>
                         <p>{journal.bible}</p>
                     </li>
 

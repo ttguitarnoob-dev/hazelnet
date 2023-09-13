@@ -59,6 +59,7 @@ export default function NewJournal() {
                     <ul>
                         <div className="form-item">
                             <li>
+                            <label htmlFor="hilow">What was your high and low today?.</label>
                                 <input
                                     name="hilow"
                                     id="hilow"
@@ -71,6 +72,7 @@ export default function NewJournal() {
                         <div className="form-item">
 
                             <li>
+                            <label htmlFor="learn">What did you learn at school today?.</label>
                                 <textarea
                                     name="learn"
                                     id="learn"
@@ -82,6 +84,7 @@ export default function NewJournal() {
                         </div>
                         <div className="form-item">
                             <li>
+                                <label htmlFor="fail">Name one thing that you failed at today.</label>
                                 <input
                                     name="fail"
                                     id="fail"
@@ -94,6 +97,7 @@ export default function NewJournal() {
                         </div>
                         <div className="form-item">
                             <li>
+                            <label htmlFor="failTeach">What did failing teach you?</label>
                                 <input
                                     name="failTeach"
                                     id="failTeach"
@@ -105,6 +109,7 @@ export default function NewJournal() {
                         </div>
                         <div className="form-item">
                             <li>
+                            <label htmlFor="failImprove">How can you improve next time?</label>
                                 <input
                                     name="failImprove"
                                     id="failImprove"
@@ -117,11 +122,12 @@ export default function NewJournal() {
                         <div className="form-item">
 
                             <li>
+                            <label htmlFor="bible">How did God show up in your life today?</label>
                                 <textarea
                                     name="bible"
                                     id="bible"
                                     type="textarea"
-                                    placeholder="What is your Bible verse of the day and what does it mean to you?"
+                                    placeholder="How did God show up in your life today?"
                                     onChange={handleChange}
                                 />
                             </li>
