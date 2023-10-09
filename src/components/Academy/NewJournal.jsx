@@ -27,7 +27,7 @@ export default function NewJournal() {
         const URL = journalURL
         const options = {
             method: "POST",
-            body: data,
+            body: JSON.stringify(data),
             // mode: "cors",
             headers: {
                 "Content-type": "application/json"
