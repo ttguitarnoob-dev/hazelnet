@@ -18,11 +18,8 @@ export default function NewJournal() {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log("Submitted", initialInput)
-        const formBody = Object.keys(initialInput).map(key =>
-            encodeURIComponent(key) + '=' +
-            encodeURIComponent(initialInput[key])).join('&')
 
-        createItem(formBody)
+        createItem(initialInput)
 
     }
 
@@ -33,7 +30,7 @@ export default function NewJournal() {
             body: data,
             // mode: "cors",
             headers: {
-                "Content-type": "application/x-www-form-urlencoded"
+                "Content-type": "application/json"
             }
         }
         try {
