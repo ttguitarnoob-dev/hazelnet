@@ -54,7 +54,7 @@ export default function SchoolJournal() {
                         // <a href={`/academy/journal/${journal._id}`} key={journal._id}><li>{journal.date}</li></a>
                         <li className="journal-entry" key={journal._id}>
 
-                            <a href={`/academy/journal/${journal._id}`} ><button>{journal.date}</button></a>
+                            <a href={`/academy/journal/${journal._id}`} ><button>{new Date(journal.date.replace(/-/g, '\/')).toLocaleDateString()}</button></a>
                         </li>
                     ))}
 

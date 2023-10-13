@@ -192,6 +192,12 @@ input[type=text] {
   width: 30rem;
 }
 
+input[type=date] {
+  padding: 0.6rem;
+  margin: 2rem;
+  width: 12rem;
+}
+
 textarea {
   width: 30rem;
   border: 1px solid black;

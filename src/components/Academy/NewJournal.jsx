@@ -34,10 +34,13 @@ export default function NewJournal() {
             }
         }
         try {
+            console.log('creatign item')
             const createdJournal = await fetch(URL, options)
-            const parsedJournal = await createdJournal.json()
+            console.log('pooooo')
+            // const parsedJournal = await createdJournal.json()
+            console.log('created?', createdJournal)
             navigate("/academy/journal")
-            return parsedJournal
+            return createdJournal
 
 
         } catch (err) {
@@ -58,7 +61,7 @@ export default function NewJournal() {
                     <ul>
                         <div className="form-item">
                             <li>
-                            <label htmlFor="hilow">What was your high and low today?.</label>
+                                <label htmlFor="hilow">What was your high and low today?.</label>
                                 <input
                                     name="hilow"
                                     id="hilow"
@@ -71,7 +74,19 @@ export default function NewJournal() {
                         <div className="form-item">
 
                             <li>
-                            <label htmlFor="learn">What did you learn at school today?.</label>
+                                <label htmlFor="date">What date is this journal for?</label>
+                                <input
+                                    name="date"
+                                    id="date"
+                                    type="date"
+                                    defaultValue={new Date()}
+                                    onChange={handleChange}
+                                />
+                            </li>
+                        </div>
+                        <div className="form-item">
+                            <li>
+                                <label htmlFor="learn">What did you learn at school today?.</label>
                                 <textarea
                                     name="learn"
                                     id="learn"
@@ -96,7 +111,7 @@ export default function NewJournal() {
                         </div>
                         <div className="form-item">
                             <li>
-                            <label htmlFor="failTeach">What did failing teach you?</label>
+                                <label htmlFor="failTeach">What did failing teach you?</label>
                                 <input
                                     name="failTeach"
                                     id="failTeach"
@@ -108,7 +123,7 @@ export default function NewJournal() {
                         </div>
                         <div className="form-item">
                             <li>
-                            <label htmlFor="failImprove">How can you improve next time?</label>
+                                <label htmlFor="failImprove">How can you improve next time?</label>
                                 <input
                                     name="failImprove"
                                     id="failImprove"
@@ -121,7 +136,7 @@ export default function NewJournal() {
                         <div className="form-item">
 
                             <li>
-                            <label htmlFor="bible">How did God show up in your life today?</label>
+                                <label htmlFor="bible">How did God show up in your life today?</label>
                                 <textarea
                                     name="bible"
                                     id="bible"
@@ -139,7 +154,7 @@ export default function NewJournal() {
                     </ul>
                 </form>
             </div>
-            
+
         </div>
     </div>
 

@@ -34,7 +34,7 @@ export default function JournalDetails() {
 
 
     return <div className="page-container">
-        <h1>Journal for {journal.date}</h1>
+        <h1>Journal for {new Date(journal.date).toLocaleDateString()}</h1>
         <a href="/academy/journal"><button>Back to Journal List</button></a>
         <div className="container">
             <div className="details-list">
