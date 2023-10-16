@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { handleFetch } from "../utils/fetch";
 import { useParams } from "react-router-dom";
-import { act } from "react-dom/test-utils";
 
 export default function TakeQuiz() {
 
@@ -23,7 +22,6 @@ export default function TakeQuiz() {
         }
         const data = await handleFetch(endpoint, options)
         setQuiz(data)
-        console.log('should be quizzes', data)
 
     }
 
@@ -34,13 +32,7 @@ export default function TakeQuiz() {
     function handleNext(e) {
         e.preventDefault()
 
-        const modifiedQuestion = quiz.questions[activeQuestion]
-
-        modifiedQuestion.choice = parseInt(selected)
-        if (modifiedQuestion.choice === modifiedQuestion.answer){
-            console.log(modifiedQuestion.choice, "is the same as", modifiedQuestion.answer, "so it's correct")
-            modifiedQuestion.correct = true
-        }
+        handleChoice()
         if (activeQuestion < quiz.questions.length - 1) {
             console.log('quiiz', quiz.questions[activeQuestion].choice)
 
@@ -60,16 +52,35 @@ export default function TakeQuiz() {
         setSelected(e.target.value)
     }
 
+    function handleChoice(){
+        const modifiedQuestion = quiz.questions[activeQuestion]
 
-    console.log('slelected', quiz)
+        modifiedQuestion.choice = parseInt(selected)
+        if (modifiedQuestion.choice === modifiedQuestion.answer){
+            modifiedQuestion.correct = true
+        }
+    }
+
+    function handleSubmit(e) {
+        e.preventDefault()
+        handleChoice()
+        console.log("submitted", quiz)
+    }
+
+    function handleScore() {
+        
+    }
+
+
 
     return (
         <section className="container">
             {quiz && <div>
                 <h1>{quiz.title}</h1>
                 <h2>Question {activeQuestion + 1}/{quiz.questions.length}:</h2>
-                <p>choice: {quiz.questions[activeQuestion].choice}</p>
+
                 <p>{quiz.questions[activeQuestion].question}</p>
+                {quiz.questions[activeQuestion].choice >= 0 && <p>Previous Choice: {quiz.questions[activeQuestion].choices[quiz.questions[activeQuestion].choice]}</p> }
                 <form onSubmit={handleNext}>
                     <ol>
                         {quiz.questions[activeQuestion].choices && quiz.questions[activeQuestion].choices.map((oneChoice, index) => (
@@ -84,6 +95,7 @@ export default function TakeQuiz() {
                 </form>
 
                 <button onClick={handleBack}>Back</button>
+                {activeQuestion === quiz.questions.length - 1 && <button onClick={handleSubmit}>Submit Quiz!</button>}
             </div>}
         </section>
     )
