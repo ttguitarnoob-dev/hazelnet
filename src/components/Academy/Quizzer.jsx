@@ -37,8 +37,8 @@ export default function Quizzer(){
                         <td>{oneQuiz.title}</td>
                         <td>{oneQuiz.subject}</td>
                         <td>{oneQuiz.score}</td>
-                        <td><a href={`/academy/quizzer/${oneQuiz._id}`}>Take Quiz!</a></td>
-                        <td><a href={`/academy/view-quiz/${oneQuiz._id}`}>View Quiz!</a></td>
+                        <td><a href={`/academy/quizzer/${oneQuiz._id}`}><button className="quiz-button">Take Quiz!</button></a></td>
+                        <td><a href={`/academy/view-quiz/${oneQuiz._id}`}><button className="quiz-button">View Quiz!</button></a></td>
                     </tr>
                 ))}
             </table>

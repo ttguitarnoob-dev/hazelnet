@@ -124,11 +124,11 @@ export default function TakeQuiz() {
                             </div>
                         ))}
                     </ol>
-                    <button>Next</button>
+                    <button>Next Question</button>
                 </form>
 
-                <button onClick={handleBack}>Back</button>
-                {activeQuestion === quiz.questions.length - 1 && <button onClick={handleSubmit}>Submit Quiz!</button>}
+                <button onClick={handleBack}>Previous Question</button>
+                {activeQuestion === quiz.questions.length - 1 && <div><button onClick={handleSubmit}>Submit Quiz!</button></div>}
             </div>}
         </section>
     )

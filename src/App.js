@@ -14,6 +14,7 @@ import NewJournal from './components/Academy/NewJournal';
 import JournalDetails from './components/Academy/JournalDetails';
 import Quizzer from './components/Academy/Quizzer';
 import TakeQuiz from './components/Academy/TakeQuiz';
+import ViewQuiz from './components/Academy/ViewQuiz';
 // import Prodigy from './components/Prodigy';
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
         <Route path='/academy/journal/' element={<SchoolJournal />} />
         <Route path='/academy/quizzer' element={<Quizzer />} />
         <Route path='/academy/quizzer/:id' element={<TakeQuiz />} />
+        <Route path='/academy/view-quiz/:id' element={<ViewQuiz />} />
       </Routes>
     </div>
 

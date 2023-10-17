@@ -9,7 +9,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0 auto;
-  font-family: 'Lakki Reddy', cursive;
+  /* font-family: 'Lakki Reddy', cursive; */
   background-attachment: fixed;
 }
 
@@ -30,7 +30,7 @@ body {
 
 
 h1 {
-  color: rgb(255, 0, 221);
+  color: rgb(255, 0, 255);
 }
 
 table {
@@ -49,11 +49,9 @@ td, th {
 }
 
 tr:nth-child(even) {
-  background-color: #dbf5da;
+  background-color: #e6e6fb;
 }
-/* tr:nth-child(odd) {
-  background-color: #470157;
-} */
+
 
 .hazel-header {
   background-color: #000000;
@@ -91,6 +89,7 @@ button{
   border: solid 2px rgb(160, 5, 250);
   font-family: 'Lakki Reddy', cursive;
   font-size: 20px;
+  margin: 1rem;
 }
 
 button:hover {
@@ -239,7 +238,7 @@ textarea {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background-color: aquamarine;
+  background-color: rgb(192, 195, 236);
   max-width: 60vw;
   border: 1px solid black;
   border-radius: 20px;
@@ -294,4 +293,22 @@ textarea {
 
 .daily-verse h2 {
   border-bottom: solid 3px black;
+}
+
+.score-color-1 {
+  color: red;
+  font-size: 3rem;
+}
+.score-color-2 {
+  color: yellow;
+  font-size: 3rem;
+}
+.score-color-3 {
+  color: rgb(23, 255, 23);
+  font-size: 3rem;
+}
+
+.quiz-button {
+  width: 99%;
+  margin: 0 auto;
 }
