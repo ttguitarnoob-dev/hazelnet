@@ -10,6 +10,7 @@ export default function Academy() {
                     <li><a href="https://myepassignments.com"><button>EasyPeasy</button></a></li>
                     <li><a href="https://www.duolingo.com" ><button>Duolingo</button></a></li>
                     <li><a href="https://zearn.org"><button>Zearn</button></a></li>
+                    <li><a href="/academy/quizzer"><button>Quizzer</button></a></li>
                 
                 </ul>
             </div>

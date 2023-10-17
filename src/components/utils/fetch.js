@@ -1,4 +1,4 @@
-async function handleFetch(endpoint, options) {
+export async function handleFetch(endpoint, options) {
 
     const URL = `https://api.ttguitarnoob.cloud/${endpoint}`
 
@@ -15,5 +15,5 @@ async function handleFetch(endpoint, options) {
 
 }
 
-export { handleFetch }
-module.exports = { handleFetch }
+// export { handleFetch }
+// module.exports = { handleFetch }
