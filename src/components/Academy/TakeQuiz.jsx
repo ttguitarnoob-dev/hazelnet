@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { handleFetch } from "../utils/fetch";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 export default function TakeQuiz() {
 
@@ -8,6 +8,8 @@ export default function TakeQuiz() {
     const { id } = useParams()
     const [activeQuestion, setActiveQuestion] = useState(0)
     const [selected, setSelected] = useState(0)
+    const endpoint = `quizzes/${id}`
+    const navigate = useNavigate()
     const choiceLetters = {
         0: "A",
         1: "B",
@@ -16,7 +18,7 @@ export default function TakeQuiz() {
     }
 
     async function getData() {
-        const endpoint = `quizzes/${id}`
+        
         const options = {
             method: "GET"
         }
@@ -43,6 +45,7 @@ export default function TakeQuiz() {
 
     function handleBack() {
         console.log('backclicked')
+        handleChoice()
         if (activeQuestion > 0) {
             setActiveQuestion((prev) => prev - 1)
         }
@@ -52,20 +55,34 @@ export default function TakeQuiz() {
         setSelected(e.target.value)
     }
 
-    function handleChoice(){
+    function handleChoice() {
         const modifiedQuestion = quiz.questions[activeQuestion]
 
         modifiedQuestion.choice = parseInt(selected)
-        if (modifiedQuestion.choice === modifiedQuestion.answer){
+        if (modifiedQuestion.choice === modifiedQuestion.answer) {
             modifiedQuestion.correct = true
         }
     }
 
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
+
+        const options = {
+            method: "PUT",
+            body: JSON.stringify(quiz),
+            mode: "cors",
+            headers: {
+                "Content-type": "application/json"
+            }
+        }
+
         e.preventDefault()
         handleChoice()
         handleScore()
         console.log("submitted", quiz, "score", quiz.score)
+        handleFetch(endpoint, options)
+        
+        navigate('/academy/quizzer')
+
     }
 
     function handleScore() {
@@ -74,14 +91,13 @@ export default function TakeQuiz() {
         for (let i = 0; i < quiz.questions.length; i++) {
             if (quiz.questions[i].correct) {
                 totalCorrect += 1
-                
+
             } else {
-                console.log('mrrrrowwwr')
+                console.log('hisssss')
             }
         }
 
         quiz.score = parseInt((totalCorrect / quiz.questions.length) * 100)
-        console.log('finallll', quiz)
 
     }
 
@@ -94,7 +110,7 @@ export default function TakeQuiz() {
                 <h2>Question {activeQuestion + 1}/{quiz.questions.length}:</h2>
 
                 <p>{quiz.questions[activeQuestion].question}</p>
-                {quiz.questions[activeQuestion].choice >= 0 && <p>Previous Choice: {quiz.questions[activeQuestion].choices[quiz.questions[activeQuestion].choice]}</p> }
+                {quiz.questions[activeQuestion].choice >= 0 && <p>Previous Choice: {quiz.questions[activeQuestion].choices[quiz.questions[activeQuestion].choice]}</p>}
                 <form onSubmit={handleNext}>
                     <ol>
                         {quiz.questions[activeQuestion].choices && quiz.questions[activeQuestion].choices.map((oneChoice, index) => (
