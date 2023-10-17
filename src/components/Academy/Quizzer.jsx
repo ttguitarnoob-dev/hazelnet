@@ -20,7 +20,6 @@ export default function Quizzer(){
         getData()
     }, [])
 
-    const smell = 234
 
     return(
         <section>
