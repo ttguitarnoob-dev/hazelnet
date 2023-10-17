@@ -22,7 +22,7 @@ export default function Quizzer(){
 
 
     return(
-        <section>
+        <section className="container">
             <h1>Quizzer!</h1>
             <table>
                 <tr>
@@ -37,18 +37,19 @@ export default function Quizzer(){
                         <td>{oneQuiz.title}</td>
                         <td>{oneQuiz.subject}</td>
                         <td>{oneQuiz.score}</td>
-                        <a href={`/academy/quizzer/${oneQuiz._id}`}><button>Take Quiz!</button></a>
+                        <td><a href={`/academy/quizzer/${oneQuiz._id}`}>Take Quiz!</a></td>
+                        <td><a href={`/academy/view-quiz/${oneQuiz._id}`}>View Quiz!</a></td>
                     </tr>
                 ))}
             </table>
-            {quizzes && quizzes.map((oneQuiz, index) => (
+            {/* {quizzes && quizzes.map((oneQuiz, index) => (
                 <section key={index}>
                     <a href={`/academy/quizzer/${oneQuiz._id}`}><p>Quiz Name: {oneQuiz.title}</p></a>
                     <p>Quiz Subject: {oneQuiz.subject}</p>
                     <p>Score: {oneQuiz.score}</p>
                     <p>Number of questions: {oneQuiz.questions.length}</p>
                 </section>
-            ))}
+            ))} */}
 
             
         </section>

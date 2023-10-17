@@ -107,6 +107,7 @@ export default function TakeQuiz() {
 
     return (
         <section className="container">
+            <a href="/academy/quizzer"><button>Back to Quizzes Page</button></a>
             {quiz && <div>
                 <h1>{quiz.title}</h1>
                 <h2>Question {activeQuestion + 1}/{quiz.questions.length}:</h2>

@@ -33,6 +33,27 @@ h1 {
   color: rgb(255, 0, 221);
 }
 
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  text-align: left;
+  width: 100%;
+  color: rgb(0, 0, 0);
+
+}
+
+td, th {
+  border: 1px solid #000000;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dbf5da;
+}
+/* tr:nth-child(odd) {
+  background-color: #470157;
+} */
 
 .hazel-header {
   background-color: #000000;
@@ -223,7 +244,9 @@ textarea {
   border: 1px solid black;
   border-radius: 20px;
   padding: 3rem;
+  margin: 0 auto;
   margin-top: 2rem;
+  
 }
 
 .container li {
