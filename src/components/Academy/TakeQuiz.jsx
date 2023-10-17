@@ -18,7 +18,7 @@ export default function TakeQuiz() {
     }
 
     async function getData() {
-        
+
         const options = {
             method: "GET"
         }
@@ -61,26 +61,28 @@ export default function TakeQuiz() {
         modifiedQuestion.choice = parseInt(selected)
         if (modifiedQuestion.choice === modifiedQuestion.answer) {
             modifiedQuestion.correct = true
+        } else {
+            modifiedQuestion.correct = false
         }
     }
 
     async function handleSubmit(e) {
-
+        e.preventDefault()
+        handleChoice()
+        handleScore()
         const options = {
             method: "PUT",
-            body: quiz,
+            body: JSON.stringify(quiz),
             mode: "cors",
             headers: {
                 "Content-type": "application/json"
             }
         }
 
-        e.preventDefault()
-        handleChoice()
-        handleScore()
+
         console.log("submitted", quiz, "score", quiz.score)
         handleFetch(endpoint, options)
-        
+
         navigate('/academy/quizzer')
 
     }
