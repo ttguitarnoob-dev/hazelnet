@@ -24,6 +24,23 @@ export default function Quizzer(){
     return(
         <section>
             <h1>Quizzer!</h1>
+            <table>
+                <tr>
+                    <th>Quiz Name</th>
+                    <th>Subject</th>
+                    <th>Score</th>
+                    <th>Take</th>
+                    <th>View</th>
+                </tr>
+                {quizzes && quizzes.map((oneQuiz, index) => (
+                    <tr>
+                        <td>{oneQuiz.title}</td>
+                        <td>{oneQuiz.subject}</td>
+                        <td>{oneQuiz.score}</td>
+                        <a href={`/academy/quizzer/${oneQuiz._id}`}><button>Take Quiz!</button></a>
+                    </tr>
+                ))}
+            </table>
             {quizzes && quizzes.map((oneQuiz, index) => (
                 <section key={index}>
                     <a href={`/academy/quizzer/${oneQuiz._id}`}><p>Quiz Name: {oneQuiz.title}</p></a>
