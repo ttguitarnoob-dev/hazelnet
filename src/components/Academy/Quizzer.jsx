@@ -30,6 +30,7 @@ export default function Quizzer(){
                     <a href={`/academy/quizzer/${oneQuiz._id}`}><p>Quiz Name: {oneQuiz.title}</p></a>
                     <p>Quiz Subject: {oneQuiz.subject}</p>
                     <p>Score: {oneQuiz.score}</p>
+                    <p>Number of questions: {oneQuiz.questions.length}</p>
                 </section>
             ))}
 

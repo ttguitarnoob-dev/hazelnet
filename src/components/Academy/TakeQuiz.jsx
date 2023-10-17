@@ -64,11 +64,25 @@ export default function TakeQuiz() {
     function handleSubmit(e) {
         e.preventDefault()
         handleChoice()
-        console.log("submitted", quiz)
+        handleScore()
+        console.log("submitted", quiz, "score", quiz.score)
     }
 
     function handleScore() {
-        
+        let totalCorrect = 0
+
+        for (let i = 0; i < quiz.questions.length; i++) {
+            if (quiz.questions[i].correct) {
+                totalCorrect += 1
+                
+            } else {
+                console.log('mrrrrowwwr')
+            }
+        }
+
+        quiz.score = parseInt((totalCorrect / quiz.questions.length) * 100)
+        console.log('finallll', quiz)
+
     }
 
 
