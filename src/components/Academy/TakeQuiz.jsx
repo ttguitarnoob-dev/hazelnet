@@ -68,7 +68,7 @@ export default function TakeQuiz() {
 
         const options = {
             method: "PUT",
-            body: JSON.stringify(quiz),
+            body: quiz,
             mode: "cors",
             headers: {
                 "Content-type": "application/json"

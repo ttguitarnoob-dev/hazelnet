@@ -6,6 +6,7 @@ async function handleFetch(endpoint, options) {
         console.log(`fetching at url ${URL}, with these options:`, options)
         const response = await fetch(URL, options)
         const data = await response.json()
+        console.log('done with fetch', data)
         return data
     } catch(err){
         console.log('Something horrendous happened when fetching', err)
