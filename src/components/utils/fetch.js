@@ -15,4 +15,5 @@ async function handleFetch(endpoint, options) {
 
 }
 
+export { handleFetch }
 module.exports = { handleFetch }

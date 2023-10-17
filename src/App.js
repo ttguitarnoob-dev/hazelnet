@@ -12,7 +12,6 @@ import Academy from './components/Academy/Academy';
 import SchoolJournal from './components/Academy/SchoolJournal';
 import NewJournal from './components/Academy/NewJournal';
 import JournalDetails from './components/Academy/JournalDetails';
-import SillyGame from './components/SillyGame';
 import Quizzer from './components/Academy/Quizzer';
 import TakeQuiz from './components/Academy/TakeQuiz';
 // import Prodigy from './components/Prodigy';
@@ -45,7 +44,6 @@ function App() {
         <Route path='/videos' element={<Yt />} />
         <Route path='/no-game' element={<NoGame />} />
         <Route path='/academy/journal/' element={<SchoolJournal />} />
-        <Route path='/silly-game' element={<SillyGame />} />
         <Route path='/academy/quizzer' element={<Quizzer />} />
         <Route path='/academy/quizzer/:id' element={<TakeQuiz />} />
       </Routes>
