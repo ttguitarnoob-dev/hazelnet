@@ -83,7 +83,7 @@ export default function TakeQuiz() {
         console.log("submitted", quiz, "score", quiz.score)
         handleFetch(endpoint, options)
 
-        navigate('/academy/quizzer')
+        navigate(`/academy/view-quiz/${id}`)
 
     }
 
