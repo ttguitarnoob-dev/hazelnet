@@ -59,19 +59,7 @@ export default function NewJournal() {
             <div className="journal-form">
                 <form className="input-form">
                     <ul>
-                        <div className="form-item">
-                            <li>
-                                <label htmlFor="hilow">What was your high and low today?.</label>
-                                <input
-                                    name="hilow"
-                                    id="hilow"
-                                    type="text"
-                                    placeholder="What was your high and low today?"
-                                    onChange={handleChange}
-                                />
-                            </li>
-                        </div>
-                        <div className="form-item">
+                       <div className="form-item">
 
                             <li>
                                 <label htmlFor="date">What date is this journal for?</label>
@@ -83,52 +71,65 @@ export default function NewJournal() {
                                     onChange={handleChange}
                                 />
                             </li>
-                        </div>
+                        </div> 
                         <div className="form-item">
                             <li>
-                                <label htmlFor="learn">What did you learn at school today?.</label>
+                                <label htmlFor="mood">If your mood right now were a type of weather what would it be?</label>
+                                <input
+                                    name="mood"
+                                    id="mood"
+                                    type="text"
+                                    placeholder="If your mood right now were a type of weather what would it be?"
+                                    onChange={handleChange}
+                                />
+                            </li>
+                        </div>
+                        
+                        <div className="form-item">
+                            <li>
+                                <label htmlFor="doOver">If you could have one do-over today, what would you do differently? </label>
                                 <textarea
-                                    name="learn"
-                                    id="learn"
+                                    name="doOver"
+                                    id="doOver"
                                     type="textarea"
-                                    placeholder="What Did You Learn at School Today?"
+                                    placeholder="If you could have one do-over today, what would you do differently?"
                                     onChange={handleChange}
                                 />
                             </li>
                         </div>
                         <div className="form-item">
                             <li>
-                                <label htmlFor="fail">Name one thing that you failed at today.</label>
+                                <label htmlFor="smile">What is something that made you smile today?</label>
                                 <input
-                                    name="fail"
-                                    id="fail"
+                                    name="smile"
+                                    id="smile"
                                     className="text-area"
                                     type="text"
-                                    placeholder="Name one thing that you failed at today."
+                                    placeholder="What is something that made you smile today?"
                                     onChange={handleChange}
                                 />
                             </li>
                         </div>
                         <div className="form-item">
                             <li>
-                                <label htmlFor="failTeach">What did failing teach you?</label>
+                                <label htmlFor="telepathy">If I had mind reading powers, what would I be able to hear right now?</label>
                                 <input
-                                    name="failTeach"
-                                    id="failTeach"
+                                    name="telepathy"
+                                    id="telepathy"
                                     type="text"
-                                    placeholder="What did failing teach you?."
+                                    placeholder="If I had mind reading powers, what would I be able to hear right now?"
                                     onChange={handleChange}
                                 />
                             </li>
                         </div>
                         <div className="form-item">
                             <li>
-                                <label htmlFor="failImprove">How can you improve next time?</label>
+                                <label htmlFor="interesting">Can you tell me about one thing you found interesting today?</label>
                                 <input
-                                    name="failImprove"
-                                    id="failImprove"
+                                    name="interesting"
+                                    id="interesting"
                                     type="text"
-                                    placeholder="How can you improve next time?"
+                                    placeholder="Can you tell me about one thing you found interesting today?"
                                     onChange={handleChange}
                                 />
                             </li>
@@ -137,11 +138,50 @@ export default function NewJournal() {
 
                             <li>
                                 <label htmlFor="bible">How did God show up in your life today?</label>
-                                <textarea
+                                <input
                                     name="bible"
                                     id="bible"
-                                    type="textarea"
+                                    type="text"
                                     placeholder="How did God show up in your life today?"
+                                    onChange={handleChange}
+                                />
+                            </li>
+                        </div>
+                        <div className="form-item">
+
+                            <li>
+                                <label htmlFor="principal">If you were in charge of your school what changes would you make?</label>
+                                <input
+                                    name="principal"
+                                    id="principal"
+                                    type="text"
+                                    placeholder="If you were in charge of your school what changes would you make?"
+                                    onChange={handleChange}
+                                />
+                            </li>
+                        </div>
+                        <div className="form-item">
+
+                            <li>
+                                <label htmlFor="book">Can you tell me about your favorite book right now ?</label>
+                                <input
+                                    name="book"
+                                    id="book"
+                                    type="text"
+                                    placeholder="Can you tell me about your favorite book right now ?"
+                                    onChange={handleChange}
+                                />
+                            </li>
+                        </div>
+                        <div className="form-item">
+
+                            <li>
+                                <label htmlFor="learnMore">What’s something you’d love to learn more about right now?</label>
+                                <input
+                                    name="learnMore"
+                                    id="learnMore"
+                                    type="text"
+                                    placeholder="What’s something you’d love to learn more about right now?"
                                     onChange={handleChange}
                                 />
                             </li>

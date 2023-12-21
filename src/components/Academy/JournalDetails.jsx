@@ -41,29 +41,42 @@ export default function JournalDetails() {
                 <ul>
 
                     <li>
-                        <h2>What was your high and low for the day?</h2>
-                        <p>{journal.hilow}</p>
+                        <h2>If your mood right now were a type of weather what would it be?</h2>
+                        <p>{journal.mood}</p>
                     </li>
                     <li>
-                        <h2>What did you learn today?</h2>
-                        <p>{journal.learn}</p>
+                        <h2>If you could have one do-over today, what would you do differently?</h2>
+                        <p>{journal.doOver}</p>
                     </li>
                     <li>
-                        <h2>In what way did you fail today?</h2>
-                        <p>{journal.fail}</p>
+                        <h2>What is something that made you smile today?</h2>
+                        <p>{journal.smile}</p>
                     </li>
                     <li>
-                        <h2>What did failing teach you?</h2>
-                        <p>{journal.failTeach}</p>
+                        <h2>If I had mind reading powers, what would I be able to hear right now?</h2>
+                        <p>{journal.telepathy}</p>
                     </li>
                     <li>
-                        <h2>How will you improve next time?</h2>
-                        <p>{journal.failImprove}</p>
+                        <h2>Can you tell me about one thing you found interesting today?</h2>
+                        <p>{journal.interesting}</p>
                     </li>
                     <li>
                         <h2>How did God show up in your life today?</h2>
                         <p>{journal.bible}</p>
                     </li>
+                    <li>
+                        <h2>If you were in charge of your school what changes would you make?</h2>
+                        <p>{journal.principal}</p>
+                    </li>
+                    <li>
+                        <h2>Can you tell me about your favorite book right now?</h2>
+                        <p>{journal.book}</p>
+                    </li>
+                    <li>
+                        <h2>What’s something you’d love to learn more about right now?</h2>
+                        <p>{journal.learnMore}</p>
+                    </li>
+                    
 
                 </ul>
             </div>
